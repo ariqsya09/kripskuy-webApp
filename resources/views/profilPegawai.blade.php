@@ -23,9 +23,13 @@
                                 <p>Alamat       : {{ $pegawai-> alamat }}</p>
                                 <p>No. Telepon  : {{ $pegawai-> nohp }}</p>
                                 <p>Email        : {{ $pegawai-> email }}</p>
-                                <div class="text-end">
-                                    <button type="button" class="btn btn-danger mb-3" style="width: 150px;">Ubah Data</button>
-                                </div>
+                                <form action="/profilPegawai/hapus" method="post">
+                                    @csrf
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-danger mb-3" style="width: 150px;" onClick="confirm('Apakah yakin ingin menghapus data?')">Hapus Data</button>
+                                        <input type="hidden" name="id" value="{{ $pegawai-> id }}">
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

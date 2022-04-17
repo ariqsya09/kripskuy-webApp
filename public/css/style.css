@@ -19,3 +19,7 @@
     border-radius: 60px;
     width: 605px;
 }
+
+.container.mt-4.mb-4{
+    border-radius: 30px;
+}
